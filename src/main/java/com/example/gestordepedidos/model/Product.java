@@ -37,6 +37,14 @@ public class Product {
         stock -= quantity;
     }
 
+    public int getProductId() {
+        return productId;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
+
     public String getName() {
         return name;
     }
