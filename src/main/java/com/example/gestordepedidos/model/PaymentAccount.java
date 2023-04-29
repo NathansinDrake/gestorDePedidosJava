@@ -4,41 +4,41 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PaymentAccount {
-    private TarjetaDeCredito tarjetaDeCredito;
-    private double saldoDisponible;
-    private List<Pedido> pedidos;
+    private CreditCard creditCard;
+    private  double availableBalance;
+    private List<Order> orderList;
 
-    public PaymentAccount(TarjetaDeCredito tarjetaDeCredito, double saldoDisponible) {
-        this.tarjetaDeCredito = tarjetaDeCredito;
-        this.saldoDisponible = saldoDisponible;
-        this.pedidos = new ArrayList<>();
+    public PaymentAccount(CreditCard creditCard, double availableBalance) {
+        this.creditCard = creditCard;
+        this.availableBalance = availableBalance;
+        this.orderList = new ArrayList<>();
     }
 
-    public TarjetaDeCredito getTarjetaDeCredito() {
-        return tarjetaDeCredito;
+    public CreditCard getCreditCard() {
+        return creditCard;
     }
 
-    public void setTarjetaDeCredito(TarjetaDeCredito tarjetaDeCredito) {
-        this.tarjetaDeCredito = tarjetaDeCredito;
+    public void setCreditCard(CreditCard creditCard) {
+        this.creditCard = creditCard;
     }
 
-    public double getSaldoDisponible() {
-        return saldoDisponible;
+    public List<Order> getOrderList() {
+        return orderList;
     }
 
-    public void setSaldoDisponible(double saldoDisponible) {
-        this.saldoDisponible = saldoDisponible;
+    public void setOrderList(List<Order> orderList) {
+        this.orderList = orderList;
     }
 
-    public List<Pedido> getPedidos() {
-        return pedidos;
+    public double getAvailableBalance() {
+        return availableBalance;
     }
 
-    public void setPedidos(List<Pedido> pedidos) {
-        this.pedidos = pedidos;
+    public void setAvailableBalance(double availableBalance) {
+        this.availableBalance = availableBalance;
     }
 
-    public void addPedido(Pedido pedido) {
-        this.pedidos.add(pedido);
+    public void addOrder(Order order) {
+        this.orderList.add(order);
     }
 }

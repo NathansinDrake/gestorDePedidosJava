@@ -1,12 +1,17 @@
 package com.example.gestordepedidos.model;
 
 public class Product {
+    private int productId;
     private String name;
     private int stock;
     private double price;
     private int quantityInStock;
 
-    public Product(String name, int stock, double price, int quantityInStock) {
+    public Product() {
+    }
+
+    public Product(int productId, String name, int stock, double price, int quantityInStock) {
+        this.productId = productId;
         this.name = name;
         this.stock = stock;
         this.price = price;
@@ -24,7 +29,6 @@ public class Product {
     public Product(double price) {
         this.price = price;
     }
-
 
     public void reduceStock(int quantity) {
         if (quantity > stock) {
