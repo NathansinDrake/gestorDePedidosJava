@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CompositeOrder extends Order {
-    protected List<Order> subOrders;
+     List<Order> subOrders;
+
 
     public CompositeOrder(Client client, PaymentAccount paymentAccount) {
         super(client, paymentAccount);
@@ -17,6 +18,10 @@ public class CompositeOrder extends Order {
 
     public List<Order> getSubOrders() {
         return subOrders;
+    }
+
+    public void setSubOrders(List<Order> subOrders) {
+        this.subOrders = subOrders;
     }
 
     public int getTotalProductQuantity() {

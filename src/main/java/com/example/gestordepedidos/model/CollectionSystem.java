@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CollectionSystem {
-    private final List<PaymentAccount> paymentAccounts;
+    private  List<PaymentAccount> paymentAccounts;
 
     public CollectionSystem() {
         this.paymentAccounts = new ArrayList<>();
@@ -30,5 +30,12 @@ public class CollectionSystem {
                 paymentAccount.getOrderList().clear();
             }
         }
+    }
+    public List<PaymentAccount> getPaymentAccounts() {
+        return paymentAccounts;
+    }
+
+    public void setPaymentAccounts(List<PaymentAccount> paymentAccounts) {
+        this.paymentAccounts = paymentAccounts;
     }
 }
